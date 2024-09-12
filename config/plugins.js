@@ -1,4 +1,5 @@
 module.exports = ({ env }) => ({
+  // ... Éventuelles autres clefs
   upload: {
     config: {
       provider: "cloudinary",
@@ -10,11 +11,12 @@ module.exports = ({ env }) => ({
       actionOptions: {
         upload: {},
         uploadStream: {
-          timeout: 1000 * 60 * 3, // = 3 minutes
+          folder: env("CLOUDINARY_FOLDER", ""),
+          timeout: 1000 * 60 * 3,
         },
         delete: {},
       },
     },
   },
-
+  // ... Éventuelles autres clefs
 });

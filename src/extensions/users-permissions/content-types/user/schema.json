@@ -72,12 +72,7 @@
       "mappedBy": "owner"
     },
     "avatar": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
+      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false
     }

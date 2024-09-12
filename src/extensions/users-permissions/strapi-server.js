@@ -4,7 +4,8 @@ module.exports = (plugin) => {
   plugin.controllers.auth.register = async (ctx) => {
     // Création normale du user sans l'image
     await register(ctx);
-    if (ctx.request.files?.avatar) { // Si j'ai reçu une clef avatar
+    if (ctx.request.files?.avatar) {
+      // Si j'ai reçu une clef avatar
       // Je vais chercher l'utilisateur qui vient d'être créé afin d'avoir accès à son id
       const user = await strapi.entityService.findMany(
         "plugin::users-permissions.user",

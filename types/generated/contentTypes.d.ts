@@ -368,7 +368,6 @@ export interface ApiOfferOffer extends Schema.CollectionType {
     singularName: 'offer';
     pluralName: 'offers';
     displayName: 'Offer';
-    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -382,7 +381,6 @@ export interface ApiOfferOffer extends Schema.CollectionType {
       }>;
     description: Attribute.Text &
       Attribute.SetMinMaxLength<{
-        minLength: 1;
         maxLength: 500;
       }>;
     price: Attribute.Decimal &
@@ -390,7 +388,7 @@ export interface ApiOfferOffer extends Schema.CollectionType {
       Attribute.SetMinMax<
         {
           min: 1;
-          max: 10000;
+          max: 100000;
         },
         number
       >;
@@ -831,7 +829,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'oneToMany',
       'api::offer.offer'
     >;
-    avatar: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    avatar: Attribute.Media<'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

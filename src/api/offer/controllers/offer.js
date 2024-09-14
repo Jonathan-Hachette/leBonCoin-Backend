@@ -21,7 +21,7 @@ module.exports = createCoreController("api::offer.offer", ({ strapi }) => ({
       const body = JSON.parse(ctx.request.body.data);
       // console.log(typeof ctx.request);
       const ownerId = body.owner;
-      console.log("OwnerId >>>", ownerId);
+      console.log(ownerId);
       if (requesterId !== ownerId) {
         ctx.response.status = 403;
         return { message: "An offer you post must be yours" };

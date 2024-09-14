@@ -12,7 +12,7 @@ module.exports = ({ env }) => ({
         upload: {},
         uploadStream: {
           folder: env("CLOUDINARY_FOLDER", ""),
-          timeout: 1000 * 60 * 3,
+          timeout: 1000 * 60 * 3, // = 3 minutes
         },
         delete: {},
       },

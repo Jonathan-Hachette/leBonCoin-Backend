@@ -55,7 +55,7 @@ module.exports = ({ env }) => {
     },
     postgres: {
       connection: {
-        connectionString: env("DATABASE_URI"), // Utilise DATABASE_URI pour la connexion
+        connectionString: env("DATABASE_URL"), // Utilise DATABASE_URI pour la connexion
         host: env("DATABASE_HOST", "localhost"),
         port: env.int("DATABASE_PORT", 5432),
         database: env("DATABASE_NAME", "strapi"),
